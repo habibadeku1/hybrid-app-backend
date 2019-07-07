@@ -4,11 +4,19 @@
     "default": {
       "connector": "strapi-hook-bookshelf",
       "settings": {
-        "client": "sqlite",
-        "filename": ".tmp/data.db"
+        "client": "postgres",
+        "filename": ".tmp/data.db",
+        "enabled": true,
+        "defaultConnection": "default",
+        "host": "hybriddbinstancedev.ccg0komfeibn.us-east-2.rds.amazonaws.com",
+        "port": 5432,
+        "database": "hybrid_strapi_dev",
+        "username": "hybrid_strapi",
+        "password": "CrFRXNBLQKFMvEY585aQ"
       },
       "options": {
-        "useNullAsDefault": true
+        "useNullAsDefault": true,
+        "authenticationDatabase": ""
       }
     }
   }
