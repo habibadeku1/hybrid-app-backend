@@ -5,9 +5,12 @@
       "connector": "strapi-hook-bookshelf",
       "settings": {
         "client": "postgres",
+<<<<<<< HEAD
         "filename": ".tmp/data.db",
         "enabled": true,
         "defaultConnection": "default",
+=======
+>>>>>>> 622bb397f4eebb97206e59989c1303973f623f96
         "host": "hybriddbinstancedev.ccg0komfeibn.us-east-2.rds.amazonaws.com",
         "port": 5432,
         "database": "hybrid_strapi_dev",
@@ -15,8 +18,12 @@
         "password": "CrFRXNBLQKFMvEY585aQ"
       },
       "options": {
+<<<<<<< HEAD
         "useNullAsDefault": true,
         "authenticationDatabase": ""
+=======
+        "ssl": false
+>>>>>>> 622bb397f4eebb97206e59989c1303973f623f96
       }
     }
   }
