@@ -63,11 +63,9 @@
       "type": "string"
     },
     "businessName": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "telephone": {
-      "required": true,
       "type": "string"
     }
   }
