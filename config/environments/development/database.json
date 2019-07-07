@@ -14,7 +14,7 @@
         "host": "hybriddbinstancedev.ccg0komfeibn.us-east-2.rds.amazonaws.com",
         "port": 5432,
         "database": "hybrid_strapi_dev",
-        "username": "hybrid_strapi",
+        "username": "hybrid_strapi_dev",
         "password": "CrFRXNBLQKFMvEY585aQ"
       },
       "options": {
