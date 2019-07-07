@@ -64,7 +64,7 @@ module.exports = {
    * @return {Object}
    */
 
-  update: async (ctx, next) => {
+  update: async (ctx) => {
     return strapi.services.product.update(ctx.params, ctx.request.body);
   },
 
@@ -75,11 +75,11 @@ module.exports = {
    * @return {Object}
    */
 
-  destroy: async (ctx, next) => {
+  destroy: async (ctx) => {
     return strapi.services.product.remove(ctx.params);
   },
 
-  delete: async (ctx, next) => {
+  delete: async (ctx) => {
     return strapi.services.product.delete(ctx.params);
   },
 
