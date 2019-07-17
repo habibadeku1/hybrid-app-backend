@@ -8,88 +8,88 @@
 
 module.exports = {
 
-  /**
-   * Retrieve product records.
-   *
-   * @return {Object|Array}
-   */
+//   /**
+//    * Retrieve product records.
+//    *
+//    * @return {Object|Array}
+//    */
 
-//   find: async(ctx) => {
-//     if (ctx.query._q) {
-//       return strapi.services.product.search(ctx.query);
+// //   find: async(ctx) => {
+// //     if (ctx.query._q) {
+// //       return strapi.services.product.search(ctx.query);
+// //     }
+// //     return strapi.services.product.find(ctx.query);
+// //   },
+
+//   /**
+//    * Retrieve a product record.
+//    *
+//    * @return {Object}
+//    */
+
+//   findOne: async (ctx) => {
+//     if (!ctx.params._id.match(/^[0-9a-fA-F]{24}$/)) {
+//       return ctx.notFound();
 //     }
-//     return strapi.services.product.find(ctx.query);
+
+//     return strapi.services.product.findOne(ctx.params);
 //   },
 
-  /**
-   * Retrieve a product record.
-   *
-   * @return {Object}
-   */
+//   /**
+//    * Count product records.
+//    *
+//    * @return {Number}
+//    */
 
-  findOne: async (ctx) => {
-    if (!ctx.params._id.match(/^[0-9a-fA-F]{24}$/)) {
-      return ctx.notFound();
-    }
+//   count: async (ctx) => {
+//     if (ctx.query._q) {
+//         return strapi.services.product.countSearch(ctx.query);
+//       }
+//       return strapi.services.product.count(ctx.query);
+//     },
 
-    return strapi.services.product.findOne(ctx.params);
-  },
+//   /**
+//    * Create a/an product record.
+//    *
+//    * @return {Object}
+//    */
 
-  /**
-   * Count product records.
-   *
-   * @return {Number}
-   */
+//   create: async (ctx) => {
+//     return strapi.services.product.create(ctx.request.body);
+//   },
 
-  count: async (ctx) => {
-    if (ctx.query._q) {
-        return strapi.services.product.countSearch(ctx.query);
-      }
-      return strapi.services.product.count(ctx.query);
-    },
+//   /**
+//    * Update a/an product record.
+//    *
+//    * @return {Object}
+//    */
 
-  /**
-   * Create a/an product record.
-   *
-   * @return {Object}
-   */
-
-  create: async (ctx) => {
-    return strapi.services.product.create(ctx.request.body);
-  },
-
-  /**
-   * Update a/an product record.
-   *
-   * @return {Object}
-   */
-
-  update: async (ctx) => {
-    return strapi.services.product.update(ctx.params, ctx.request.body);
-  },
+//   update: async (ctx) => {
+//     return strapi.services.product.update(ctx.params, ctx.request.body);
+//   },
 
 
-  /**
-   * Destroy a/an product record.
-   *
-   * @return {Object}
-   */
+//   /**
+//    * Destroy a/an product record.
+//    *
+//    * @return {Object}
+//    */
 
-  destroy: async (ctx) => {
-    return strapi.services.product.remove(ctx.params);
-  },
+//   destroy: async (ctx) => {
+//     return strapi.services.product.remove(ctx.params);
+//   },
 
-  delete: async (ctx) => {
-    return strapi.services.product.delete(ctx.params);
-  },
+//   delete: async (ctx) => {
+//     return strapi.services.product.delete(ctx.params);
+//   },
 
-  // added content range for data provider
-  find: async (ctx) => {
-    ctx.set('Content-Range', await strapi.services.product.count(ctx.query));
-    if (ctx.query._q) {
-        return strapi.services.product.search(ctx.query);
-      }
-      return strapi.services.product.find(ctx.query);
-  }
+//   // added content range for data provider
+//   find: async (ctx) => {
+//     ctx.set('Content-Range', await strapi.services.product.count(ctx.query));
+//     if (ctx.query._q) {
+//         return strapi.services.product.search(ctx.query);
+//       }
+//       return strapi.services.product.find(ctx.query);
+//   }
 
 };

@@ -8,87 +8,87 @@
 
 module.exports = {
 
-  /**
-   * Retrieve order records.
-   *
-   * @return {Object|Array}
-   */
+//   /**
+//    * Retrieve order records.
+//    *
+//    * @return {Object|Array}
+//    */
 
-//   find: async(ctx) => {
-//     if (ctx.query._q) {
-//       return strapi.services.order.search(ctx.query);
+// //   find: async(ctx) => {
+// //     if (ctx.query._q) {
+// //       return strapi.services.order.search(ctx.query);
+// //     }
+// //     return strapi.services.order.find(ctx.query);
+// //   },
+
+//   /**
+//    * Retrieve a order record.
+//    *
+//    * @return {Object}
+//    */
+
+//   findOne: async (ctx) => {
+//     if (!ctx.params._id.match(/^[0-9a-fA-F]{24}$/)) {
+//       return ctx.notFound();
 //     }
-//     return strapi.services.order.find(ctx.query);
+
+//     return strapi.services.order.findOne(ctx.params);
 //   },
 
-  /**
-   * Retrieve a order record.
-   *
-   * @return {Object}
-   */
+//   /**
+//    * Count order records.
+//    *
+//    * @return {Number}
+//    */
 
-  findOne: async (ctx) => {
-    if (!ctx.params._id.match(/^[0-9a-fA-F]{24}$/)) {
-      return ctx.notFound();
-    }
+//   count: async (ctx) => {
+//     if (ctx.query._q) {
+//         return strapi.services.order.countSearch(ctx.query);
+//       }
+//       return strapi.services.order.count(ctx.query);
+//     },
 
-    return strapi.services.order.findOne(ctx.params);
-  },
+//   /**
+//    * Create a/an order record.
+//    *
+//    * @return {Object}
+//    */
 
-  /**
-   * Count order records.
-   *
-   * @return {Number}
-   */
+//   create: async (ctx) => {
+//     return strapi.services.order.create(ctx.request.body);
+//   },
 
-  count: async (ctx) => {
-    if (ctx.query._q) {
-        return strapi.services.order.countSearch(ctx.query);
-      }
-      return strapi.services.order.count(ctx.query);
-    },
+//   /**
+//    * Update a/an order record.
+//    *
+//    * @return {Object}
+//    */
 
-  /**
-   * Create a/an order record.
-   *
-   * @return {Object}
-   */
+//   update: async (ctx) => {
+//     return strapi.services.order.update(ctx.params, ctx.request.body);
+//   },
 
-  create: async (ctx) => {
-    return strapi.services.order.create(ctx.request.body);
-  },
+//   /**
+//    * Destroy a/an order record.
+//    *
+//    * @return {Object}
+//    */
 
-  /**
-   * Update a/an order record.
-   *
-   * @return {Object}
-   */
+//   destroy: async (ctx) => {
+//     return strapi.services.order.remove(ctx.params);
+//   },
 
-  update: async (ctx) => {
-    return strapi.services.order.update(ctx.params, ctx.request.body);
-  },
+//   delete: async (ctx) => {
+//     return strapi.services.order.delete(ctx.params);
+//   },
 
-  /**
-   * Destroy a/an order record.
-   *
-   * @return {Object}
-   */
-
-  destroy: async (ctx) => {
-    return strapi.services.order.remove(ctx.params);
-  },
-
-  delete: async (ctx) => {
-    return strapi.services.order.delete(ctx.params);
-  },
-
-  // added content range for data provider
-  find: async (ctx) => {
-    ctx.set('Content-Range', await strapi.services.order.count(ctx.query));
-    if (ctx.query._q) {
-        return strapi.services.order.search(ctx.query);
-      }
-      return strapi.services.order.find(ctx.query);
-  }
+//   // added content range for data provider
+//   find: async (ctx) => {
+//     ctx.set('Content-Range', await strapi.services.order.count(ctx.query));
+//     if (ctx.query._q) {
+//         return strapi.services.order.search(ctx.query);
+//       }
+//       return strapi.services.order.find(ctx.query);
+//   }
 
 };

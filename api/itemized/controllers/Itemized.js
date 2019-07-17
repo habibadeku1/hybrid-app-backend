@@ -8,87 +8,87 @@
 
 module.exports = {
 
-  /**
-   * Retrieve itemized records.
-   *
-   * @return {Object|Array}
-   */
+//   /**
+//    * Retrieve itemized records.
+//    *
+//    * @return {Object|Array}
+//    */
 
-//   find: async(ctx) => {
-//     if (ctx.query._q) {
-//       return strapi.services.itemized.search(ctx.query);
+// //   find: async(ctx) => {
+// //     if (ctx.query._q) {
+// //       return strapi.services.itemized.search(ctx.query);
+// //     }
+// //     return strapi.services.itemized.find(ctx.query);
+// //   },
+
+//   /**
+//    * Retrieve a itemized record.
+//    *
+//    * @return {Object}
+//    */
+
+//   findOne: async (ctx) => {
+//     if (!ctx.params._id.match(/^[0-9a-fA-F]{24}$/)) {
+//       return ctx.notFound();
 //     }
-//     return strapi.services.itemized.find(ctx.query);
+
+//     return strapi.services.itemized.findOne(ctx.params);
 //   },
 
-  /**
-   * Retrieve a itemized record.
-   *
-   * @return {Object}
-   */
+//   /**
+//    * Count itemized records.
+//    *
+//    * @return {Number}
+//    */
 
-  findOne: async (ctx) => {
-    if (!ctx.params._id.match(/^[0-9a-fA-F]{24}$/)) {
-      return ctx.notFound();
-    }
+//   count: async (ctx) => {
+//     if (ctx.query._q) {
+//         return strapi.services.itemized.countSearch(ctx.query);
+//       }
+//       return strapi.services.itemized.count(ctx.query);
+//     },
 
-    return strapi.services.itemized.findOne(ctx.params);
-  },
+//   /**
+//    * Create a/an itemized record.
+//    *
+//    * @return {Object}
+//    */
 
-  /**
-   * Count itemized records.
-   *
-   * @return {Number}
-   */
+//   create: async (ctx) => {
+//     return strapi.services.itemized.create(ctx.request.body);
+//   },
 
-  count: async (ctx) => {
-    if (ctx.query._q) {
-        return strapi.services.itemized.countSearch(ctx.query);
-      }
-      return strapi.services.itemized.count(ctx.query);
-    },
+//   /**
+//    * Update a/an itemized record.
+//    *
+//    * @return {Object}
+//    */
 
-  /**
-   * Create a/an itemized record.
-   *
-   * @return {Object}
-   */
+//   update: async (ctx) => {
+//     return strapi.services.itemized.update(ctx.params, ctx.request.body);
+//   },
 
-  create: async (ctx) => {
-    return strapi.services.itemized.create(ctx.request.body);
-  },
+//   /**
+//    * Destroy a/an itemized record.
+//    *
+//    * @return {Object}
+//    */
 
-  /**
-   * Update a/an itemized record.
-   *
-   * @return {Object}
-   */
+//   destroy: async (ctx) => {
+//     return strapi.services.itemized.remove(ctx.params);
+//   },
 
-  update: async (ctx) => {
-    return strapi.services.itemized.update(ctx.params, ctx.request.body);
-  },
+//   delete: async (ctx) => {
+//     return strapi.services.itemized.delete(ctx.params);
+//   },
 
-  /**
-   * Destroy a/an itemized record.
-   *
-   * @return {Object}
-   */
-
-  destroy: async (ctx) => {
-    return strapi.services.itemized.remove(ctx.params);
-  },
-
-  delete: async (ctx) => {
-    return strapi.services.itemized.delete(ctx.params);
-  },
-
-  // added content range for data provider
-  find: async (ctx) => {
-    ctx.set('Content-Range', await strapi.services.itemized.count(ctx.query));
-    if (ctx.query._q) {
-        return strapi.services.itemized.search(ctx.query);
-      }
-      return strapi.services.itemized.find(ctx.query);
-  }
+//   // added content range for data provider
+//   find: async (ctx) => {
+//     ctx.set('Content-Range', await strapi.services.itemized.count(ctx.query));
+//     if (ctx.query._q) {
+//         return strapi.services.itemized.search(ctx.query);
+//       }
+//       return strapi.services.itemized.find(ctx.query);
+//   }
 
 };
