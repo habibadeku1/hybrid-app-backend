@@ -34,7 +34,7 @@
     },
     {
       "method": "PUT",
-      "path": "/products/:_id",
+      "path": "/products/:id",
       "handler": "Product.update",
       "config": {
         "policies": []
@@ -42,7 +42,7 @@
     },
     {
       "method": "DELETE",
-      "path": "/products/:_id",
+      "path": "/products/:id",
       "handler": "Product.delete",
       "config": {
         "policies": []
