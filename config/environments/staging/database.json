@@ -5,11 +5,11 @@
       "connector": "strapi-hook-bookshelf",
       "settings": {
         "client": "postgres",
-        "host": "hybriddbinstancestage.ccg0komfeibn.us-east-2.rds.amazonaws.com",
+        "host": "hybridinstance.ccg0komfeibn.us-east-2.rds.amazonaws.com",
         "port": 5432,
-        "database": "hybrid_strapi_stage",
-        "username": "hybrid_strapi_stage",
-        "password": "hybrid_strapi_stage"
+        "database": "hybrid",
+        "username": "hybrid",
+        "password": "CrFRXNBLQKFMvEY585aQ"
       },
       "options": {}
     }

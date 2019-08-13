@@ -1,6 +1,6 @@
 {
-  "host": "18.216.76.52",
-  "port": "1339",
+  "host": "3.130.130.145",
+  "port": "1337",
   "production": true,
   "proxy": {
     "enabled": false
