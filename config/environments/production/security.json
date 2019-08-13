@@ -34,8 +34,7 @@
     "origin": "*",
     "expose": [
       "WWW-Authenticate",
-      "Server-Authorization",      
-      "Content-Range"
+      "Server-Authorization"
     ],
     "maxAge": 31536000,
     "credentials": true,
